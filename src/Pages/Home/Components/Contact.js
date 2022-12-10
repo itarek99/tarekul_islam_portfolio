@@ -26,7 +26,7 @@ const Contact = () => {
 
       <div className='mt-14'>
         <form onSubmit={handleSubmit} className='w-full max-w-5xl mx-auto'>
-          <div className='grid grid-cols-2 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             <input type='text' placeholder='Name' name='name' className='input input-bordered w-full' />
             <input type='email' placeholder='Email' name='email' className='input input-bordered w-full' />
             <ValidationError prefix='Email' field='email' errors={state.errors} />
@@ -34,7 +34,7 @@ const Contact = () => {
               rows='5'
               name='message'
               placeholder='Message'
-              className='textarea textarea-bordered col-span-2'
+              className='textarea textarea-bordered md:col-span-2'
             ></textarea>
             <ValidationError prefix='Message' field='message' errors={state.errors} />
           </div>
