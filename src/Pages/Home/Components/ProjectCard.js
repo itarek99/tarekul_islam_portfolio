@@ -7,7 +7,7 @@ const ProjectCard = ({ project }) => {
   return (
     <div>
       <img
-        className='w-full aspect-video object-cover object-top transition-all ease-in-out duration-[2000ms] hover:object-bottom'
+        className='w-full aspect-[16/11]  object-cover object-top transition-all ease-in-out duration-[2000ms] hover:object-bottom'
         src={image}
         alt=''
       />

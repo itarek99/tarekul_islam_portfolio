@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className='flex-none'>
           <ul className='menu menu-horizontal px-1'>
             <li>
-              <a href='#project'>Projects</a>
+              <a href='#projects'>Projects</a>
             </li>
             <li>
               <a href='#contact'>Contact</a>
