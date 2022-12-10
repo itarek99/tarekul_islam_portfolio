@@ -6,7 +6,7 @@ const Footer = () => {
       <div className='container mx-auto px-2 py-6'>
         <p className='text-lg'>Social Connections</p>
         <div className='flex gap-2 text-3xl mt-2'>
-          <a href='f.com'>
+          <a href='https://www.facebook.com/tarek161803/'>
             <FaFacebookSquare />
           </a>
           <a href='f.com'>
