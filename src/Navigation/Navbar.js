@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto py-4'>
       <div className='navbar bg-base-100'>
         <div className='flex-1'>
           <div className='text-3xl font-bold uppercase cursor-pointer'>Tarek</div>
