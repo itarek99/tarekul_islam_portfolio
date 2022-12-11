@@ -9,8 +9,8 @@ const projects = [
     title: 'Car Bazaar',
     details: 'Used Car Selling Website.',
     image: carBazaar,
-    live_link: 'https://pixel-photography-b713f.web.app/',
-    github_link: 'https://github.com/itarek99/pixel_photography-client-side',
+    live_link: 'https://car-bazaar-49998.web.app/',
+    github_link: 'https://github.com/itarek99/car_bazaar-client-side/',
   },
 
   {
@@ -27,8 +27,8 @@ const projects = [
     title: 'Tuts Point',
     details: 'Online Education Platform.',
     image: tustPoint,
-    live_link: 'https://pixel-photography-b713f.web.app/',
-    github_link: 'https://github.com/itarek99/pixel_photography-client-side',
+    live_link: 'https://tuts-point-240ea.web.app/',
+    github_link: 'https://github.com/itarek99/tuts_point-client-side/',
   },
 ];
 

@@ -5,6 +5,7 @@ import mongoDB from '../../assets/icons/mongodb.png';
 import node from '../../assets/icons/nodejs.png';
 import reactRouter from '../../assets/icons/react-router.png';
 import reactIcon from '../../assets/icons/react.png';
+import swiper from '../../assets/icons/swiper.png';
 import tailwindcss from '../../assets/icons/tailwindcss.png';
 
 import carBazaarIma1 from '../../assets/project_ss/car_bazaar_1.png';
@@ -31,11 +32,13 @@ const projectDetailsData = [
       'Dynamic dashboard for different types of users (admin/seller/buyer).',
       'Admin can delete a buyer or seller account and delete the reported products.',
       'The seller can advertise their products that will appear on the home page.',
+      'Different types of authentication systems with firebase authentication.',
+      'Responsive layout for all kinds of modern devices designed with tailwind CSS.',
     ],
     images: [carBazaarIma2, carBazaarIma3, carBazaarIma1],
     imagesTitle: ['Login System', 'Dashboard', 'Advertised Product'],
-    liveLink: 'link',
-    githubLink: 'link',
+    liveLink: 'https://car-bazaar-49998.web.app/',
+    githubLink: 'https://github.com/itarek99/car_bazaar-client-side',
     technologies: [reactIcon, node, mongoDB, firebase, tailwindcss, reactRouter],
   },
   {
@@ -43,14 +46,15 @@ const projectDetailsData = [
     title: 'Pixel Photography',
     subTitle: 'Photography Service Provider Website.',
     details: [
-      'Dynamic dashboard for different types of users (admin/seller/buyer).',
-      'Admin can delete a buyer or seller account and delete the reported products.',
-      'The seller can advertise their products that will appear on the home page.',
+      'Fully functional node MongoDB CRUD Application with MongoDB Atlas.',
+      'Different types of authentication systems with firebase authentication.',
+      'Responsive layout for all kinds of modern devices designed with tailwind CSS.',
+      'User authorization with JSON Web Token and local storage.',
     ],
     images: [pixelPhoto1, pixelPhoto3, pixelPhoto2],
     imagesTitle: ['Comment Functionality', `User's Comments`, 'Service Cards'],
-    liveLink: 'link',
-    githubLink: 'link',
+    liveLink: 'https://pixel-photography-b713f.web.app/',
+    githubLink: 'https://github.com/itarek99/pixel_photography-client-side',
     technologies: [reactIcon, node, mongoDB, firebase, tailwindcss, reactRouter],
   },
   {
@@ -58,15 +62,17 @@ const projectDetailsData = [
     title: 'Tuts Point',
     subTitle: 'Online Course Selling Platform',
     details: [
-      'Dynamic dashboard for different types of users (admin/seller/buyer).',
-      'Admin can delete a buyer or seller account and delete the reported products.',
-      'The seller can advertise their products that will appear on the home page.',
+      'Different types of authentication systems with firebase authentication.',
+      'Multiple routes and layouts implemented with React Router.',
+      'Users can generate and download dynamic PDFs with React-pdf.',
+      'Responsive layout for all kinds of modern devices designed with tailwind CSS.',
+      'Beautiful and interactive slider build with swiper js.',
     ],
     images: [tutsPoint1, tutsPoint3, tutsPoint2],
     imagesTitle: ['Dynamic Routes', 'Course Details', 'Registration System'],
-    liveLink: 'link',
-    githubLink: 'link',
-    technologies: [reactIcon, node, mongoDB, firebase, tailwindcss, reactRouter],
+    liveLink: 'https://tuts-point-240ea.web.app/',
+    githubLink: 'https://github.com/itarek99/tuts_point-client-side',
+    technologies: [reactIcon, node, firebase, tailwindcss, reactRouter, swiper],
   },
 ];
 
@@ -125,8 +131,10 @@ const ProjectDetails = () => {
             <div>
               <h4 className='text-3xl font-medium'>Project Details</h4>
               <ul className='ml-4 list-disc'>
-                {projectData.details.map((detail) => (
-                  <li className='mt-2'>{detail}</li>
+                {projectData.details.map((detail, i) => (
+                  <li key={i} className='mt-2'>
+                    {detail}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -135,9 +143,9 @@ const ProjectDetails = () => {
               <div>
                 <h2 className='text-2xl font-medium'>Technology Used</h2>
                 <div className='flex gap-2 mt-3'>
-                  {projectData.technologies.map((technology) => (
-                    <div className='h-12 w-12 p-2 bg-[#2A2C39] flex items-center justify-center'>
-                      <img className='object-cover' src={technology} alt='technology' />
+                  {projectData.technologies.map((technology, i) => (
+                    <div key={i} className='h-12 w-12 p-2 bg-[#2A2C39] flex items-center justify-center'>
+                      <img className=' object-cover' src={technology} alt='technology' />
                     </div>
                   ))}
                 </div>
