@@ -7,6 +7,21 @@ import reactRouter from '../../assets/icons/react-router.png';
 import reactIcon from '../../assets/icons/react.png';
 import tailwindcss from '../../assets/icons/tailwindcss.png';
 
+import carBazaarIma1 from '../../assets/project_ss/car_bazaar_1.png';
+import carBazaarIma2 from '../../assets/project_ss/car_bazaar_2.png';
+import carBazaarIma3 from '../../assets/project_ss/car_bazaar_3.png';
+
+import pixelPhoto1 from '../../assets/project_ss/pixel_photo_1.png';
+import pixelPhoto2 from '../../assets/project_ss/pixel_photo_2.png';
+import pixelPhoto3 from '../../assets/project_ss/pixel_photo_3.png';
+
+import tutsPoint1 from '../../assets/project_ss/tuts_point_1.png';
+import tutsPoint2 from '../../assets/project_ss/tuts_point_2.png';
+import tutsPoint3 from '../../assets/project_ss/tuts_point_3.png';
+
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const projectDetailsData = [
   {
     id: 'car-bazaar',
@@ -17,11 +32,38 @@ const projectDetailsData = [
       'Admin can delete a buyer or seller account and delete the reported products.',
       'The seller can advertise their products that will appear on the home page.',
     ],
-    images: [
-      'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaG5vbG9neXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60',
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGVjaG5vbG9neXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60',
-      'https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dGVjaG5vbG9neXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60',
+    images: [carBazaarIma2, carBazaarIma3, carBazaarIma1],
+    imagesTitle: ['Login System', 'Dashboard', 'Advertised Product'],
+    liveLink: 'link',
+    githubLink: 'link',
+    technologies: [reactIcon, node, mongoDB, firebase, tailwindcss, reactRouter],
+  },
+  {
+    id: 'pixel-photography',
+    title: 'Pixel Photography',
+    subTitle: 'Photography Service Provider Website.',
+    details: [
+      'Dynamic dashboard for different types of users (admin/seller/buyer).',
+      'Admin can delete a buyer or seller account and delete the reported products.',
+      'The seller can advertise their products that will appear on the home page.',
     ],
+    images: [pixelPhoto1, pixelPhoto3, pixelPhoto2],
+    imagesTitle: ['Comment Functionality', `User's Comments`, 'Service Cards'],
+    liveLink: 'link',
+    githubLink: 'link',
+    technologies: [reactIcon, node, mongoDB, firebase, tailwindcss, reactRouter],
+  },
+  {
+    id: 'tuts-point',
+    title: 'Tuts Point',
+    subTitle: 'Online Course Selling Platform',
+    details: [
+      'Dynamic dashboard for different types of users (admin/seller/buyer).',
+      'Admin can delete a buyer or seller account and delete the reported products.',
+      'The seller can advertise their products that will appear on the home page.',
+    ],
+    images: [tutsPoint1, tutsPoint3, tutsPoint2],
+    imagesTitle: ['Dynamic Routes', 'Course Details', 'Registration System'],
     liveLink: 'link',
     githubLink: 'link',
     technologies: [reactIcon, node, mongoDB, firebase, tailwindcss, reactRouter],
@@ -30,6 +72,12 @@ const projectDetailsData = [
 
 const ProjectDetails = () => {
   const { id } = useParams();
+
+  // scroll to top
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const projectData = projectDetailsData.find((project) => project.id === id);
 
@@ -58,15 +106,18 @@ const ProjectDetails = () => {
             <p className='text-sm'>{projectData.subTitle}</p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8'>
             <div>
               <img className='w-full' src={projectData.images[0]} alt='project screenshot' />
+              <p className='mt-1'>{projectData.imagesTitle[0]}</p>
             </div>
             <div>
               <img className='w-full' src={projectData.images[1]} alt='project screenshot' />
+              <p className='mt-1'>{projectData.imagesTitle[1]}</p>
             </div>
             <div className='md:col-span-2'>
-              <img className='w-full max-h-96 object-cover' src={projectData.images[2]} alt='project screenshot' />
+              <img className='w-full object-cover' src={projectData.images[2]} alt='project screenshot' />
+              <p className='mt-1'>{projectData.imagesTitle[2]}</p>
             </div>
           </div>
 
