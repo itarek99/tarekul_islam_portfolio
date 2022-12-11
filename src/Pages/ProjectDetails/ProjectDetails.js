@@ -82,10 +82,10 @@ const ProjectDetails = () => {
 
             <div>
               <div>
-                <h2 className='text-3xl font-medium'>Technology Used</h2>
-                <div className='flex gap-2 mt-4'>
+                <h2 className='text-2xl font-medium'>Technology Used</h2>
+                <div className='flex gap-2 mt-3'>
                   {projectData.technologies.map((technology) => (
-                    <div className='h-14 w-14 p-2 bg-[#2A2C39] flex items-center justify-center'>
+                    <div className='h-12 w-12 p-2 bg-[#2A2C39] flex items-center justify-center'>
                       <img className='object-cover' src={technology} alt='technology' />
                     </div>
                   ))}
@@ -93,14 +93,14 @@ const ProjectDetails = () => {
               </div>
 
               <div className='mt-8'>
-                <h2 className='text-3xl font-medium'>Links</h2>
-                <div className='flex items-center gap-2 mt-4'>
-                  <div className='h-14 w-14 p-2 bg-[#2A2C39] flex items-center justify-center'>
+                <h2 className='text-2xl font-medium'>Links</h2>
+                <div className='flex items-center gap-2 mt-3'>
+                  <div className='h-12 w-12 p-1 bg-[#2A2C39] flex items-center justify-center'>
                     <a className='text-2xl' target='_blank' rel='noreferrer' href={projectData.liveLink}>
                       <BsGlobe2 />
                     </a>
                   </div>
-                  <div className='h-14 w-14 p-2 bg-[#2A2C39] flex items-center justify-center'>
+                  <div className='h-12 w-12 p-1 bg-[#2A2C39] flex items-center justify-center'>
                     <a className='text-2xl' target='_blank' rel='noreferrer' href={projectData.githubLink}>
                       <BsGithub />
                     </a>
