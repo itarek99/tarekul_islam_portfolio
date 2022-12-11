@@ -1,8 +1,9 @@
 import { BsGithub, BsGlobe2 } from 'react-icons/bs';
 import { FaChevronRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ project }) => {
-  const { title, image, details, live_link, github_link } = project;
+  const { title, image, details, live_link, github_link, id } = project;
 
   return (
     <div>
@@ -15,10 +16,10 @@ const ProjectCard = ({ project }) => {
         <h3 className='text-lg'>{title}</h3>
         <p className='text-sm'>{details}</p>
         <div className='flex justify-between items-center mt-8'>
-          <button className='flex items-center text-xs font-medium '>
+          <Link to={id} className='flex items-center text-xs font-medium '>
             READ MORE&nbsp;
             <FaChevronRight />
-          </button>
+          </Link>
 
           <div className='flex items-center gap-3'>
             <a className='text-xl' target='_blank' rel='noreferrer' href={live_link}>

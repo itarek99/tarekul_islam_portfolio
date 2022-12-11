@@ -3,7 +3,9 @@ const Navbar = () => {
     <div className='container mx-auto py-4'>
       <div className='navbar bg-base-100'>
         <div className='flex-1'>
-          <div className='text-3xl font-bold uppercase cursor-pointer'>Tarek</div>
+          <a href='/' className='text-3xl font-bold uppercase cursor-pointer'>
+            Tarek
+          </a>
         </div>
         <div className='flex-none'>
           <ul className='menu menu-horizontal px-1'>
@@ -17,7 +19,7 @@ const Navbar = () => {
               <a href='#contact'>Contact</a>
             </li>
             <li>
-              <a href='#blog'>Blog</a>
+              <a href='/#blog'>Blog</a>
             </li>
           </ul>
         </div>

@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 
 const projects = [
   {
-    id: 2,
+    id: 'car-bazaar',
     title: 'Car Bazaar',
     details: 'Used Car Selling Website.',
     image: carBazaar,
@@ -14,7 +14,7 @@ const projects = [
   },
 
   {
-    id: 1,
+    id: 'pixel-photography',
     title: 'Pixel Photography',
     details: 'Photography Service Provider Website.',
     image: pixelPhotography,
@@ -23,7 +23,7 @@ const projects = [
   },
 
   {
-    id: 3,
+    id: 'tuts-point',
     title: 'Tuts Point',
     details: 'Online Education Platform.',
     image: tustPoint,
