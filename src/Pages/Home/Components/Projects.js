@@ -93,7 +93,7 @@ const Projects = () => {
           className='mySwiper py-0 md:py-8'
         >
           {projects.map((project) => (
-            <SwiperSlide className='mb-6' key={project.id}>
+            <SwiperSlide className='mb-10 md:mb-6' key={project.id}>
               <ProjectCard project={project} />
             </SwiperSlide>
           ))}
