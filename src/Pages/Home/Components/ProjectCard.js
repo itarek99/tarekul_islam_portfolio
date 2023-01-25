@@ -15,8 +15,8 @@ const ProjectCard = ({ project }) => {
       <div className='bg-base-100 p-6'>
         <h3 className='text-lg'>{title}</h3>
         <p className='text-sm'>{details}</p>
-        <div className='flex justify-between items-center mt-8'>
-          <Link to={id} className='flex items-center text-xs font-medium '>
+        <div className='flex justify-between items-center mt-6'>
+          <Link to={id} className='flex items-center text-xs font-medium py-2'>
             READ MORE&nbsp;
             <FaChevronRight />
           </Link>
