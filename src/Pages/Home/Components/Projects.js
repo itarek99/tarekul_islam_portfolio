@@ -87,10 +87,10 @@ const Projects = () => {
             modifier: 1,
             slideShadows: true,
           }}
-          autoplay={{ delay: 2000 }}
+          autoplay={{ delay: 3000 }}
           pagination={true}
           modules={[EffectCoverflow, Pagination, Autoplay]}
-          className='mySwiper py-16'
+          className='mySwiper py-0 md:py-8'
         >
           {projects.map((project) => (
             <SwiperSlide key={project.id}>
