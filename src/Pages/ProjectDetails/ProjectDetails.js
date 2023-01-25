@@ -53,6 +53,7 @@ const projectDetailsData = [
       'Multiple pages and dynamic tables for different types of operations.',
       'Admin can manage employees, payroll, job openings, and much more.',
       'My contribution is creating home, employee, and payroll pages.',
+      'Admin Credential, Email: "admin@staff-deck.com" Password: "123123"',
     ],
     images: [staffDeck2, staffDeck3, staffDeck1],
     imagesTitle: ['Payroll Page', 'Job Application Form', 'Employee Page'],
