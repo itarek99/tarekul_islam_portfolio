@@ -19,29 +19,29 @@ const Navbar = () => {
 
         {/* small screen navbar */}
 
-        <button onClick={handleNavbarToggle} className='md:hidden text-4xl p-1 cursor-pointer'>
+        <button onClick={handleNavbarToggle} className='md:hidden text-4xl cursor-pointer'>
           <HiOutlineMenuAlt3 />
         </button>
         {navbarToggle && (
           <div className='block md:hidden fixed text-center px-2 w-full left-0 right-0 top-20 z-40 '>
-            <ul className='mx-auto w-full max-w-xl bg-[#2A2C39] space-y-3 py-4'>
+            <ul className='mx-auto w-full max-w-[640px] bg-[#2A2C39] space-y-3 py-4'>
               <li>
-                <a className='py-1 block' href='#projects'>
+                <a onClick={() => setNavbarToggle(false)} className='py-1 block' href='#projects'>
                   Projects
                 </a>
               </li>
               <li>
-                <a className='py-1 block' href='#about'>
+                <a onClick={() => setNavbarToggle(false)} className='py-1 block' href='#about'>
                   About
                 </a>
               </li>
               <li>
-                <a className='py-1 block' href='#contact'>
+                <a onClick={() => setNavbarToggle(false)} className='py-1 block' href='#contact'>
                   Contact
                 </a>
               </li>
               <li>
-                <a className='py-1 block' href='/#blog'>
+                <a onClick={() => setNavbarToggle(false)} className='py-1 block' href='/#blog'>
                   Blog
                 </a>
               </li>

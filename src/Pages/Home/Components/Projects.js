@@ -3,6 +3,14 @@ import pixelPhotography from '../../../assets/images/pixel_photography.png';
 import tustPoint from '../../../assets/images/tuts_point.png';
 import ProjectCard from './ProjectCard';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper';
+
 const projects = [
   {
     id: 'car-bazaar',
@@ -46,11 +54,39 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-14 gap-8 lg:gap-12'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-14 gap-8 lg:gap-12'></div>
+
+        <Swiper
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+            1280: {
+              slidesPerView: 3,
+            },
+          }}
+          loop={true}
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          autoplay={{ delay: 2000 }}
+          pagination={true}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          className='mySwiper py-16'
+        >
           {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <SwiperSlide key={project.id}>
+              <ProjectCard project={project} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </div>
   );
