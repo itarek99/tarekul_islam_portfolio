@@ -1,5 +1,6 @@
 import carBazaar from '../../../assets/images/car_bazaar.png';
 import pixelPhotography from '../../../assets/images/pixel_photography.png';
+import staffDeck from '../../../assets/images/staff_deck.png';
 import tustPoint from '../../../assets/images/tuts_point.png';
 import ProjectCard from './ProjectCard';
 
@@ -20,7 +21,14 @@ const projects = [
     live_link: 'https://car-bazaar-49998.web.app/',
     github_link: 'https://github.com/itarek99/car_bazaar-client-side/',
   },
-
+  {
+    id: 'staff-deck',
+    title: 'Staff Deck',
+    details: 'HR Management Application',
+    image: staffDeck,
+    live_link: 'https://hr-management-client-2a430.web.app/',
+    github_link: 'https://github.com/Rubayet-billah/hr-management-client/',
+  },
   {
     id: 'pixel-photography',
     title: 'Pixel Photography',
@@ -61,8 +69,11 @@ const Projects = () => {
             640: {
               slidesPerView: 2,
             },
-            1280: {
+            1024: {
               slidesPerView: 3,
+            },
+            1536: {
+              slidesPerView: 4,
             },
           }}
           loop={true}

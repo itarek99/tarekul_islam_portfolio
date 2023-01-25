@@ -20,6 +20,10 @@ import tutsPoint1 from '../../assets/project_ss/tuts_point_1.png';
 import tutsPoint2 from '../../assets/project_ss/tuts_point_2.png';
 import tutsPoint3 from '../../assets/project_ss/tuts_point_3.png';
 
+import staffDeck1 from '../../assets/project_ss/staff_deck_1.png';
+import staffDeck2 from '../../assets/project_ss/staff_deck_2.png';
+import staffDeck3 from '../../assets/project_ss/staff_deck_3.png';
+
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -40,6 +44,21 @@ const projectDetailsData = [
     liveLink: 'https://car-bazaar-49998.web.app/',
     githubLink: 'https://github.com/itarek99/car_bazaar-client-side',
     technologies: [reactIcon, node, mongoDB, firebase, tailwindcss, reactRouter],
+  },
+  {
+    id: 'staff-deck',
+    title: 'Staff Deck',
+    subTitle: 'HR Management Application (Group Project)',
+    details: [
+      'Multiple pages and dynamic tables for different types of operations.',
+      'Admin can manage employees, payroll, job openings, and much more.',
+      'My contribution is creating home, employee, and payroll pages.',
+    ],
+    images: [staffDeck2, staffDeck3, staffDeck1],
+    imagesTitle: ['Payroll Page', 'Job Application Form', 'Employee Page'],
+    liveLink: 'https://hr-management-client-2a430.web.app/',
+    githubLink: 'https://github.com/Rubayet-billah/hr-management-client',
+    technologies: [reactIcon, node, mongoDB, firebase, tailwindcss, reactRouter, swiper],
   },
   {
     id: 'pixel-photography',
